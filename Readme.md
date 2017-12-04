@@ -2,9 +2,13 @@
 
 Converts a video from whatever format to a version encoded using ASCII 'pixels' and output as an mp4
 
-Turn this: [Before](https://i.imgur.com/spXNcEm.gifv)
+Turn this:
 
-Into this: [After](https://i.imgur.com/mP6v90t.gifv)
+![Before](https://i.imgur.com/spXNcEm.gif)
+
+Into this: 
+
+![After](https://i.imgur.com/mP6v90t.gif)
 
 ## Requirements
 

@@ -23,7 +23,7 @@ mkdir -p $ascii_dir
 
 # Convert video frames into images at 25fps
 echo "Encoding frames to jpeg..."
-ffmpeg -i $input -r 25 -f image2 $source_dir/%7d.jpg > /dev/null 2>&1
+ffmpeg -i "$input" -r 25 -f image2 $source_dir/%7d.jpg > /dev/null 2>&1
 
 # Convert each frame into ascii
 for frame in `ls -1 $source_dir/*.jpg`; do
@@ -34,7 +34,7 @@ done
 
 # Combine frames into new video
 echo "Encoding frames back to video..."
-ffmpeg -r 25 -f image2 -s 1920x1080 -i $ascii_dir/%07d.tga -vcodec libx264 -crf 25  -pix_fmt yuv420p $output > /dev/null 2>&1
+ffmpeg -r 25 -f image2 -s 1920x1080 -i $ascii_dir/%07d.tga -vcodec libx264 -crf 25  -pix_fmt yuv420p "$output" > /dev/null 2>&1
 
 # Clean up
 echo "Cleaning temporary files..."
